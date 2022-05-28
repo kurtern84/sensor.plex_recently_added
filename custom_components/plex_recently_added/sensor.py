@@ -2,9 +2,9 @@
 Home Assistant component to feed the Upcoming Media Lovelace card with
 Plex recently added media.
 
-https://github.com/custom-components/sensor.plex_recently_added
+https://github.com/NemesisRE/sensor.plex_recently_added
 
-https://github.com/custom-cards/upcoming-media-card
+https://github.com/NemesisRE/upcoming-media-card
 
 """
 import os.path
