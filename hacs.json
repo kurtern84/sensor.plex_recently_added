@@ -1,4 +1,5 @@
 {
   "name": "Plex recently added sensor",
-  "render_readme": true
+  "render_readme": true,
+  "iot_class": "Local Polling"
 }
