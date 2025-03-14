@@ -288,8 +288,12 @@ class PlexRecentlyAddedSensor(Entity):
 
             """Make list of images in dir that use our naming scheme"""
             dir_re = re.compile(r'[pf]\d+\.jpg')  # p1234.jpg or f1234.jpg
-            dir_images = list(filter(dir_re.search,
-                                     os.listdir(directory)))
+
+            # Bruk self.hass for å få tilgang til hass-instansen
+            dir_images = await self.hass.async_add_executor_job(
+                lambda: list(filter(dir_re.search, os.listdir(directory)))
+            )
+
             dir_ids = [file[1:-4] for file in dir_images]
             dir_ids.sort(key=int)
 
